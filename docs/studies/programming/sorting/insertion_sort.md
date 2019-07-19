@@ -21,10 +21,42 @@ selection sort will write only `O(n)` times, which makes it a bad option for
 cases where writing to memory is significantly more expensive than reading,
 such as when sorting things from disk.
 
+## Animation
+
+![](https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif)
+
 ## Complexity
 
-$$ Best: O(n), Average: O(n^2), Worst: O(n^2), Space: O(n) + O(1) $$
+$$ Best: \mathcal{O}(n) \\
+Average: \mathcal{O}(n^2) \\
+Worst: \mathcal{O}(n^2) \\
+Space: \mathcal{O}(n) + \mathcal{O}(1) $$
+
+## Pseudo-code
+
+```
+i ← 1
+while i < length(A)
+    j ← i
+    while j > 0 and A[j-1] > A[j]
+        swap A[j] and A[j-1]
+        j ← j - 1
+    end while
+    i ← i + 1
+end while
+```
 
 ## Implementation
 
+```rust
+pub fn sort<T: Ord>(list: &mut Vec<T>) {
+    for i in 1..list.len() {
+        let mut j = i;
 
+        while j > 0 && list[j - 1] > list[j] {
+            list.swap(j, j - 1);
+            j = j - 1;
+        }
+    }
+}
+```
