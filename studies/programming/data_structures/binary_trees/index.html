@@ -1,0 +1,910 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>Binary Trees - Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.4031d38b.css">
+      
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@7.1.2/dist/mermaid.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#binary-trees" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../.." title="Docs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Docs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Binary Trees
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../../.." title="Docs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Wiki Index" class="md-nav__link">
+      Wiki Index
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Studies
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Studies
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../" title="Study Board" class="md-nav__link">
+      Study Board
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      Math
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        Math
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../math/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" checked>
+    
+    <label class="md-nav__link" for="nav-2-3">
+      Programming
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        Programming
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-2" type="checkbox" id="nav-2-3-2" checked>
+    
+    <label class="md-nav__link" for="nav-2-3-2">
+      Data structures
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-3-2">
+        Data structures
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Binary Trees
+      </label>
+    
+    <a href="./" title="Binary Trees" class="md-nav__link md-nav__link--active">
+      Binary Trees
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-binary-trees" title="Types of Binary Trees" class="md-nav__link">
+    Types of Binary Trees
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tree-traversal" title="Tree Traversal" class="md-nav__link">
+    Tree Traversal
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-order-traversal-root-left-right" title="Pre-order Traversal (root -&gt; left -&gt; right)" class="md-nav__link">
+    Pre-order Traversal (root -&gt; left -&gt; right)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-order-traversal-left-root-right" title="In-order Traversal (left -&gt; root -&gt; right)" class="md-nav__link">
+    In-order Traversal (left -&gt; root -&gt; right)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-order-traversal-left-right-root" title="Post-order Traversal (left -&gt; right -&gt; root)" class="md-nav__link">
+    Post-order Traversal (left -&gt; right -&gt; root)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-order-traversal" title="Level-order Traversal" class="md-nav__link">
+    Level-order Traversal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse-level-order-traversal" title="Reverse Level-order Traversal" class="md-nav__link">
+    Reverse Level-order Traversal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3-3" type="checkbox" id="nav-2-3-3">
+    
+    <label class="md-nav__link" for="nav-2-3-3">
+      Sorting
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-3-3">
+        Sorting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sorting/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sorting/insertion_sort/" title="Insertion Sort" class="md-nav__link">
+      Insertion Sort
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-binary-trees" title="Types of Binary Trees" class="md-nav__link">
+    Types of Binary Trees
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tree-traversal" title="Tree Traversal" class="md-nav__link">
+    Tree Traversal
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-order-traversal-root-left-right" title="Pre-order Traversal (root -&gt; left -&gt; right)" class="md-nav__link">
+    Pre-order Traversal (root -&gt; left -&gt; right)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#in-order-traversal-left-root-right" title="In-order Traversal (left -&gt; root -&gt; right)" class="md-nav__link">
+    In-order Traversal (left -&gt; root -&gt; right)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-order-traversal-left-right-root" title="Post-order Traversal (left -&gt; right -&gt; root)" class="md-nav__link">
+    Post-order Traversal (left -&gt; right -&gt; root)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#level-order-traversal" title="Level-order Traversal" class="md-nav__link">
+    Level-order Traversal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse-level-order-traversal" title="Reverse Level-order Traversal" class="md-nav__link">
+    Reverse Level-order Traversal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="binary-trees">Binary Trees</h1>
+<p>A binary tree is a data structure where each node has 0, 1 or two children,
+referred to as <code>left child</code> and <code>right child</code>. A node without a parent is
+called a <code>root</code>, nodes without children are called <code>leaves</code>.</p>
+<p>Each node has 0-N <code>ancestors</code>, which refers to the parent chain up to the root,
+and <code>descendants</code>, in the direction of the leaves. The <code>depth</code> is the level of
+the node in comparison to the roots (root is lv1, both its children are lv2)
+and so on.</p>
+<h2 id="types-of-binary-trees">Types of Binary Trees</h2>
+<ul>
+<li>Complete Tree: is a tree that is filled (as in, each node has at 2 nodes
+  except for the leaves), and all the leaves in the last level are as far left
+  as possible.</li>
+</ul>
+<div class="mermaid">graph TD
+  1 --&gt; 2
+  1 --&gt; 3
+  2 --&gt; 4
+  2 --&gt; 5
+  3 --&gt; 6
+  3 --&gt; 7
+  4 --&gt; 8</div>
+
+<ul>
+<li>Full Tree: is a tree in which every node has either 0 or 2 children.</li>
+</ul>
+<div class="mermaid">graph TD
+  1 --&gt; 2
+  1 --&gt; 3
+  2 --&gt; 4
+  2 --&gt; 5
+  3 --&gt; 6
+  3 --&gt; 7</div>
+
+<p>Which can be represented with the following:</p>
+<div class="highlight"><pre><span></span><span class="k">pub</span><span class="w"> </span><span class="k">type</span> <span class="nc">Child</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Option</span><span class="o">&lt;</span><span class="nb">Box</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;&gt;</span><span class="p">;</span><span class="w"></span>
+
+<span class="cp">#[derive(Clone, Debug)]</span><span class="w"></span>
+<span class="k">pub</span><span class="w"> </span><span class="k">struct</span> <span class="nc">Node</span><span class="o">&lt;</span><span class="n">T</span>: <span class="nb">Clone</span> <span class="o">+</span><span class="w"> </span><span class="nb">Copy</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Debug</span><span class="o">&gt;</span><span class="p">(</span><span class="k">pub</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="k">pub</span><span class="w"> </span><span class="n">Child</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="k">pub</span><span class="w"> </span><span class="n">Child</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">);</span><span class="w"></span>
+
+<span class="cp">#[derive(Clone, Debug)]</span><span class="w"></span>
+<span class="k">pub</span><span class="w"> </span><span class="k">struct</span> <span class="nc">BinaryTree</span><span class="o">&lt;</span><span class="n">T</span>: <span class="nb">Clone</span> <span class="o">+</span><span class="w"> </span><span class="nb">Copy</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Debug</span><span class="o">&gt;</span><span class="p">(</span><span class="k">pub</span><span class="w"> </span><span class="n">Node</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+
+<p>In accordance to how the borrow check in rust works, it can not recurse on
+itself unless it's wrapped by an <code>Rc</code> or an <code>Box</code>. We're also going to be using
+it for all the implementations unless stated otherwise, to maintain consistency
+and focus on the algorithms themselves. The contained types must implement
+Copy, but that's just to make things a lot easier.</p>
+<p>In addition, we also use the following methods to make creating the trees easier:</p>
+<div class="highlight"><pre><span></span><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">node2</span><span class="o">&lt;</span><span class="n">T</span>: <span class="nb">Clone</span> <span class="o">+</span><span class="w"> </span><span class="nb">Copy</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Debug</span><span class="o">&gt;</span><span class="p">(</span><span class="n">name</span>: <span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="n">left</span>: <span class="nc">Node</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">right</span>: <span class="nc">Node</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nc">Node</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="nb">Box</span>::<span class="n">new</span><span class="p">(</span><span class="n">left</span><span class="p">)),</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="nb">Box</span>::<span class="n">new</span><span class="p">(</span><span class="n">right</span><span class="p">)))</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">node1r</span><span class="o">&lt;</span><span class="n">T</span>: <span class="nb">Clone</span> <span class="o">+</span><span class="w"> </span><span class="nb">Copy</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Debug</span><span class="o">&gt;</span><span class="p">(</span><span class="n">name</span>: <span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="n">right</span>: <span class="nc">Node</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nc">Node</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="nb">None</span><span class="p">,</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="nb">Box</span>::<span class="n">new</span><span class="p">(</span><span class="n">right</span><span class="p">)))</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">node1l</span><span class="o">&lt;</span><span class="n">T</span>: <span class="nb">Clone</span> <span class="o">+</span><span class="w"> </span><span class="nb">Copy</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Debug</span><span class="o">&gt;</span><span class="p">(</span><span class="n">name</span>: <span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="n">right</span>: <span class="nc">Node</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nc">Node</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="nb">Box</span>::<span class="n">new</span><span class="p">(</span><span class="n">right</span><span class="p">)),</span><span class="w"> </span><span class="nb">None</span><span class="p">)</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">node0</span><span class="o">&lt;</span><span class="n">T</span>: <span class="nb">Clone</span> <span class="o">+</span><span class="w"> </span><span class="nb">Copy</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Debug</span><span class="o">&gt;</span><span class="p">(</span><span class="n">name</span>: <span class="nc">T</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nc">Node</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">Node</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="nb">None</span><span class="p">,</span><span class="w"> </span><span class="nb">None</span><span class="p">)</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+
+<h2 id="tree-traversal">Tree Traversal</h2>
+<p>Is the process of visiting (checking, updating) each node in a tree structure,
+exactly once. Unlike linked lists and arrays, which are usually traversed in
+linear order, trees may be traversed in two "main" ways:</p>
+<ul>
+<li><strong>Breadth-first</strong>: check all the nodes on a certain level then going to
+  the next one.</li>
+<li><strong>Depth-first</strong>: check all the nodes in a certain "lineage", then come back
+  and follow the other paths.</li>
+</ul>
+<p>Other algorithms are usually variations of those two types.</p>
+<p>The tree used for the tests is the following:</p>
+<div class="mermaid">graph TD
+ F--&gt;B
+ B--&gt;A
+ B--&gt;D
+ D--&gt;C
+ D--&gt;E
+ F--&gt;G
+ G--&gt;|right|I
+ I--&gt;|right|H</div>
+
+<p>With the helpers provided earlier, we can create it like this:</p>
+<div class="highlight"><pre><span></span><span class="n">BinaryTree</span><span class="p">(</span><span class="n">node2</span><span class="p">(</span><span class="w"></span>
+<span class="w">        </span><span class="s">&quot;F&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="n">node2</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">node0</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">node2</span><span class="p">(</span><span class="s">&quot;D&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">node0</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">node0</span><span class="p">(</span><span class="s">&quot;E&quot;</span><span class="p">))),</span><span class="w"></span>
+<span class="w">        </span><span class="n">node1r</span><span class="p">(</span><span class="s">&quot;G&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">node1r</span><span class="p">(</span><span class="s">&quot;I&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">node0</span><span class="p">(</span><span class="s">&quot;H&quot;</span><span class="p">))),</span><span class="w"></span>
+<span class="p">));</span><span class="w"></span>
+</pre></div>
+
+<p>Unless specified otherwise, the Rust implementations will expose the same
+interface and can be tested with:</p>
+<div class="highlight"><pre><span></span><span class="n">traverse_tree</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;|&amp;</span><span class="n">node</span><span class="o">|</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">println</span><span class="o">!</span><span class="p">(</span><span class="s">&quot; -&gt; {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="p">);</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
+</pre></div>
+
+<h3 id="pre-order-traversal-root-left-right">Pre-order Traversal (root -&gt; left -&gt; right)</h3>
+<ol>
+<li>Check if the current node is empty or null.</li>
+<li>Visit the root/current node.</li>
+<li>Traverse the left subtree, by recursively calling the function with the
+   current node as the new root.</li>
+<li>Traverse the right subtree, by recursively calling the function with the
+   current node as the new root.</li>
+</ol>
+<div class="highlight"><pre><span></span><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">traverse_tree</span><span class="o">&lt;</span><span class="n">T</span>: <span class="nb">Clone</span> <span class="o">+</span><span class="w"> </span><span class="nb">Copy</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Debug</span><span class="o">&gt;</span><span class="p">(</span><span class="n">tree</span>: <span class="nc">BinaryTree</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span>: <span class="kp">&amp;</span><span class="nb">Fn</span><span class="p">(</span><span class="o">&amp;</span><span class="n">T</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">traverse</span><span class="p">(</span><span class="o">&amp;</span><span class="nb">Some</span><span class="p">(</span><span class="nb">Box</span>::<span class="n">new</span><span class="p">(</span><span class="n">tree</span><span class="p">.</span><span class="mi">0</span><span class="p">)),</span><span class="w"> </span><span class="n">fun</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">traverse</span><span class="o">&lt;</span><span class="n">T</span>: <span class="nb">Clone</span> <span class="o">+</span><span class="w"> </span><span class="nb">Copy</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Debug</span><span class="o">&gt;</span><span class="p">(</span><span class="n">node</span>: <span class="kp">&amp;</span><span class="nc">Child</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span>: <span class="kp">&amp;</span><span class="nb">Fn</span><span class="p">(</span><span class="o">&amp;</span><span class="n">T</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="n">node</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">fun</span><span class="p">(</span><span class="o">&amp;</span><span class="n">node</span><span class="p">.</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">traverse</span><span class="p">(</span><span class="o">&amp;</span><span class="n">node</span><span class="p">.</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">traverse</span><span class="p">(</span><span class="o">&amp;</span><span class="n">node</span><span class="p">.</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+
+<p>Result:</p>
+<div class="highlight"><pre><span></span> -&gt; F -&gt; B -&gt; A -&gt; D -&gt; C -&gt; E -&gt; G -&gt; I -&gt; H
+</pre></div>
+
+<h3 id="in-order-traversal-left-root-right">In-order Traversal (left -&gt; root -&gt; right)</h3>
+<ol>
+<li>Check if the current node is empty or null.</li>
+<li>Traverse the left subtree, by recursively calling the function with the
+   current node as the new root.</li>
+<li>Visit the root/current node.</li>
+<li>Traverse the right subtree, by recursively calling the function with the
+   current node as the new root.</li>
+</ol>
+<div class="highlight"><pre><span></span><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">traverse_tree</span><span class="o">&lt;</span><span class="n">T</span>: <span class="nb">Clone</span> <span class="o">+</span><span class="w"> </span><span class="nb">Copy</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Debug</span><span class="o">&gt;</span><span class="p">(</span><span class="n">tree</span>: <span class="nc">BinaryTree</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span>: <span class="kp">&amp;</span><span class="nb">Fn</span><span class="p">(</span><span class="o">&amp;</span><span class="n">T</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">traverse</span><span class="p">(</span><span class="o">&amp;</span><span class="nb">Some</span><span class="p">(</span><span class="nb">Box</span>::<span class="n">new</span><span class="p">(</span><span class="n">tree</span><span class="p">.</span><span class="mi">0</span><span class="p">)),</span><span class="w"> </span><span class="n">fun</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">traverse</span><span class="o">&lt;</span><span class="n">T</span>: <span class="nb">Clone</span> <span class="o">+</span><span class="w"> </span><span class="nb">Copy</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Debug</span><span class="o">&gt;</span><span class="p">(</span><span class="n">node</span>: <span class="kp">&amp;</span><span class="nc">Child</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span>: <span class="kp">&amp;</span><span class="nb">Fn</span><span class="p">(</span><span class="o">&amp;</span><span class="n">T</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="n">node</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">traverse</span><span class="p">(</span><span class="o">&amp;</span><span class="n">node</span><span class="p">.</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">fun</span><span class="p">(</span><span class="o">&amp;</span><span class="n">node</span><span class="p">.</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">traverse</span><span class="p">(</span><span class="o">&amp;</span><span class="n">node</span><span class="p">.</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+
+<p>Result:</p>
+<div class="highlight"><pre><span></span> -&gt; A -&gt; B -&gt; C -&gt; D -&gt; E -&gt; F -&gt; G -&gt; I -&gt; H
+</pre></div>
+
+<h3 id="post-order-traversal-left-right-root">Post-order Traversal (left -&gt; right -&gt; root)</h3>
+<ol>
+<li>Check if the current node is empty or null.</li>
+<li>Traverse the left subtree, by recursively calling the function with the
+   current node as the new root.</li>
+<li>Traverse the right subtree, by recursively calling the function with the
+   current node as the new root.</li>
+<li>Visit the root/current node.</li>
+</ol>
+<div class="highlight"><pre><span></span><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">traverse_tree</span><span class="o">&lt;</span><span class="n">T</span>: <span class="nb">Clone</span> <span class="o">+</span><span class="w"> </span><span class="nb">Copy</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Debug</span><span class="o">&gt;</span><span class="p">(</span><span class="n">tree</span>: <span class="nc">BinaryTree</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span>: <span class="kp">&amp;</span><span class="nb">Fn</span><span class="p">(</span><span class="o">&amp;</span><span class="n">T</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">traverse</span><span class="p">(</span><span class="o">&amp;</span><span class="nb">Some</span><span class="p">(</span><span class="nb">Box</span>::<span class="n">new</span><span class="p">(</span><span class="n">tree</span><span class="p">.</span><span class="mi">0</span><span class="p">)),</span><span class="w"> </span><span class="n">fun</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">traverse</span><span class="o">&lt;</span><span class="n">T</span>: <span class="nb">Clone</span> <span class="o">+</span><span class="w"> </span><span class="nb">Copy</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Debug</span><span class="o">&gt;</span><span class="p">(</span><span class="n">node</span>: <span class="kp">&amp;</span><span class="nc">Child</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span>: <span class="kp">&amp;</span><span class="nb">Fn</span><span class="p">(</span><span class="o">&amp;</span><span class="n">T</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="n">node</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">traverse</span><span class="p">(</span><span class="o">&amp;</span><span class="n">node</span><span class="p">.</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">traverse</span><span class="p">(</span><span class="o">&amp;</span><span class="n">node</span><span class="p">.</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">fun</span><span class="p">(</span><span class="o">&amp;</span><span class="n">node</span><span class="p">.</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+
+<p>Result:</p>
+<div class="highlight"><pre><span></span> -&gt; A -&gt; C -&gt; E -&gt; D -&gt; B -&gt; H -&gt; I -&gt; G -&gt; F
+</pre></div>
+
+<h3 id="level-order-traversal">Level-order Traversal</h3>
+<p>To do the level-order traversal of the tree, we need a Queue, or some other
+form of collection that supports FIFO (First in, First out). For the Rust
+examples, I'm using the <a href="https://gitlab.com/rust-algorithms/queues">queues</a> crate.</p>
+<ol>
+<li>Initialize an empty queue, and add the root to it.</li>
+<li>While the queue is not empty:</li>
+<li>Visit the node.</li>
+<li>If present, add left child to the queue.</li>
+<li>If present, add right child to the queue.</li>
+</ol>
+<div class="highlight"><pre><span></span><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">traverse_tree</span><span class="o">&lt;</span><span class="n">T</span>: <span class="nb">Clone</span> <span class="o">+</span><span class="w"> </span><span class="nb">Copy</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Debug</span><span class="o">&gt;</span><span class="p">(</span><span class="n">tree</span>: <span class="nc">BinaryTree</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span>: <span class="kp">&amp;</span><span class="nb">Fn</span><span class="p">(</span><span class="o">&amp;</span><span class="n">T</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">traverse</span><span class="p">(</span><span class="o">&amp;</span><span class="nb">Some</span><span class="p">(</span><span class="nb">Box</span>::<span class="n">new</span><span class="p">(</span><span class="n">tree</span><span class="p">.</span><span class="mi">0</span><span class="p">)),</span><span class="w"> </span><span class="n">fun</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">traverse</span><span class="o">&lt;</span><span class="n">T</span>: <span class="nb">Clone</span> <span class="o">+</span><span class="w"> </span><span class="nb">Copy</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Debug</span><span class="o">&gt;</span><span class="p">(</span><span class="n">node</span>: <span class="kp">&amp;</span><span class="nc">Child</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span>: <span class="kp">&amp;</span><span class="nb">Fn</span><span class="p">(</span><span class="o">&amp;</span><span class="n">T</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="n">node</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">nodes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">queue</span><span class="o">!</span><span class="p">[];</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">nodes</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">node</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Ok</span><span class="p">(</span><span class="n">top</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nodes</span><span class="p">.</span><span class="n">remove</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="n">fun</span><span class="p">(</span><span class="o">&amp;</span><span class="n">top</span><span class="p">.</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="k">ref</span><span class="w"> </span><span class="n">left</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">top</span><span class="p">.</span><span class="mi">1</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">nodes</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">left</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">};</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="k">ref</span><span class="w"> </span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">top</span><span class="p">.</span><span class="mi">2</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">nodes</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">right</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">};</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+
+<h3 id="reverse-level-order-traversal">Reverse Level-order Traversal</h3>
+<div class="highlight"><pre><span></span><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">traverse_tree</span><span class="o">&lt;</span><span class="n">T</span>: <span class="nb">Clone</span> <span class="o">+</span><span class="w"> </span><span class="nb">Copy</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Debug</span><span class="o">&gt;</span><span class="p">(</span><span class="n">tree</span>: <span class="nc">BinaryTree</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span>: <span class="kp">&amp;</span><span class="nb">Fn</span><span class="p">(</span><span class="o">&amp;</span><span class="n">T</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">traverse</span><span class="p">(</span><span class="o">&amp;</span><span class="nb">Some</span><span class="p">(</span><span class="nb">Box</span>::<span class="n">new</span><span class="p">(</span><span class="n">tree</span><span class="p">.</span><span class="mi">0</span><span class="p">)),</span><span class="w"> </span><span class="n">fun</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">traverse</span><span class="o">&lt;</span><span class="n">T</span>: <span class="nb">Clone</span> <span class="o">+</span><span class="w"> </span><span class="nb">Copy</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Debug</span><span class="o">&gt;</span><span class="p">(</span><span class="n">node</span>: <span class="kp">&amp;</span><span class="nc">Child</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">fun</span>: <span class="kp">&amp;</span><span class="nb">Fn</span><span class="p">(</span><span class="o">&amp;</span><span class="n">T</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">queue</span>: <span class="nc">Queue</span><span class="o">&lt;&amp;</span><span class="n">Node</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">queue</span><span class="o">!</span><span class="p">[];</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">stack</span>: <span class="nb">Vec</span><span class="o">&lt;&amp;</span><span class="n">Node</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vec</span><span class="o">!</span><span class="p">[];</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="n">node</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">queue</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">node</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Ok</span><span class="p">(</span><span class="n">top</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">queue</span><span class="p">.</span><span class="n">remove</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="c1">// Remember to revert the order, as adding it left to right would</span>
+<span class="w">            </span><span class="c1">// also invert the childs in the tree.</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="k">ref</span><span class="w"> </span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">top</span><span class="p">.</span><span class="mi">2</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">queue</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">right</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">};</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="k">ref</span><span class="w"> </span><span class="n">left</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">top</span><span class="p">.</span><span class="mi">1</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="n">queue</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">left</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="p">};</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">stack</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">top</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="n">node</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stack</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">fun</span><span class="p">(</span><span class="o">&amp;</span><span class="n">node</span><span class="p">.</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+
+<p>Result:</p>
+<div class="highlight"><pre><span></span> -&gt; C -&gt; E -&gt; H -&gt; A -&gt; D -&gt; I -&gt; B -&gt; G -&gt; F
+</pre></div>
+
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=6oL-0TdVy28&amp;list=PL5tcWHG-UPH2fmYC6kgey1RIxP2iK9EEL">This amazing playlist by LucidProgramming</a></li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../" title="Index" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Index
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../sorting/" title="Index" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Index
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.ffb616e8.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script>
+      
+        <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
