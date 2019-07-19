@@ -1,4 +1,4 @@
-site_name: Docs
+site_name: Modern Paranoid Study Notes
 theme:
   name: material
 markdown_extensions:
