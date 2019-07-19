@@ -1,0 +1,5 @@
+# Wiki Index
+
+$$
+P = NP
+$$
